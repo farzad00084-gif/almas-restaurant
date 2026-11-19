@@ -51,6 +51,24 @@ eight launch blockers: unverified prices, stock images, missing email and
 hours, draft legal copy, missing production domain, preview content mode and
 disabled indexing. Nothing may be published until those are resolved.
 
+## Deploy on Vercel
+
+This repository keeps the Next.js app in `site/`, so the Vercel project must use
+that folder as its root.
+
+1. Import the repository into Vercel.
+2. Set **Root Directory** to `site`.
+3. Keep the framework preset as **Next.js**.
+4. For a review/staging deployment, leave the environment variables unset. The
+   build runs in preview mode with `noindex` and the preview ribbon.
+5. For a public production deployment, set the variables from
+   `site/.env.example` and make the build command `npm run build:production`.
+   That command enforces the strict content gate and currently fails by design.
+
+Do not set `NEXT_PUBLIC_CONTENT_MODE=production` while using the default
+`npm run build`; that would bypass the strict content gate. No custom domain
+should be connected until the launch checklist is signed off.
+
 ## Production references
 
 - [`docs/production/STAGE-4-PRODUCTION-PLAN.md`](docs/production/STAGE-4-PRODUCTION-PLAN.md)
