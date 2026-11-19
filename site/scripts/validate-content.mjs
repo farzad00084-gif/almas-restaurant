@@ -76,6 +76,7 @@ function validateMenu() {
   const ids = new Set();
   let itemCount = 0;
   let unverifiedPrices = 0;
+  let unphotographed = 0;
 
   for (const category of menu.categories) {
     const expected = expectedCategories[category.id];
@@ -122,6 +123,21 @@ function validateMenu() {
       }
       if (item.priceVerified !== true) unverifiedPrices += 1;
 
+      if (typeof item.image === "string" && item.image.length > 0) {
+        const photo = media?.images?.find(
+          (image) => image.id === item.image,
+        );
+        if (!photo) {
+          fail(
+            `menu.json: "${item.id}" references unknown photo "${item.image}".`,
+          );
+        } else if (photo.isPlaceholder === true) {
+          unphotographed += 1;
+        }
+      } else {
+        unphotographed += 1;
+      }
+
       if (item.familyPriceDisplay) {
         if (!/^\d+\.\d{2}$/.test(item.familyPriceDisplay)) {
           fail(
@@ -151,6 +167,14 @@ function validateMenu() {
     );
   } else {
     pass("menu.json: every price is verified.");
+  }
+
+  if (unphotographed > 0) {
+    blocker(
+      `menu.json: ${unphotographed} of ${itemCount} items have no real dish photo; the item dialog labels category stock as a placeholder.`,
+    );
+  } else {
+    pass("menu.json: every item has a real dish photo.");
   }
 
   if (menu.priceVerified !== true && unverifiedPrices === 0) {
@@ -256,6 +280,21 @@ function validateSite() {
     blocker("site.json: no verified email address is available.");
   } else {
     pass("site.json: email address present.");
+  }
+
+  const whatsapp = site.whatsapp ?? {};
+  if (!/^\+[1-9]\d{7,14}$/.test(whatsapp.number ?? "")) {
+    fail(
+      "site.json: whatsapp.number must be in international format, e.g. +41627975000.",
+    );
+  } else if (!whatsapp.display) {
+    fail("site.json: whatsapp.display is empty.");
+  } else if (whatsapp.verified !== true) {
+    blocker(
+      "site.json: the WhatsApp ordering number is provisional and not verified. The printed menu only shows a telephone number.",
+    );
+  } else {
+    pass("site.json: verified WhatsApp ordering number present.");
   }
 
   if (!site.hours) {

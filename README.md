@@ -5,9 +5,10 @@ Switzerland. The approved “Facets” design pairs a Porcelain light theme with
 an Obsidian dark theme, editorial menus and diamond geometry.
 
 > **Status: Stage 5, preview only.** The site contains unverified menu prices,
-> licensed stock placeholders, missing contact details and draft legal copy.
-> It must not be publicly launched until the strict content gate passes and the
-> client supplies verified content. See `site/README.md`.
+> licensed stock placeholders, a provisional WhatsApp ordering target, missing
+> contact details and draft legal copy. It must not be publicly launched until
+> the strict content gate passes and the client supplies verified content. See
+> `site/README.md`.
 
 ## Repository layout
 
@@ -33,7 +34,8 @@ npm run dev
 ```
 
 Open <http://localhost:3000> (redirects to `/de`). Full setup, routes, content
-workflow and deployment rules are in [`site/README.md`](site/README.md).
+workflow, the WhatsApp ordering flow and deployment rules are in
+[`site/README.md`](site/README.md).
 
 ## Quality and content gate
 
@@ -47,9 +49,10 @@ npm run validate:content:strict
 ```
 
 The preview build passes. The strict production gate intentionally fails on
-eight launch blockers: unverified prices, stock images, missing email and
-hours, draft legal copy, missing production domain, preview content mode and
-disabled indexing. Nothing may be published until those are resolved.
+ten launch blockers: unverified prices, missing per-dish photos, stock images,
+missing email, provisional WhatsApp number, missing hours, draft legal copy,
+missing production domain, preview content mode and disabled indexing. Nothing
+may be published until those are resolved.
 
 ## Deploy on Vercel
 

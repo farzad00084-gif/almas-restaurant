@@ -52,6 +52,20 @@ export interface SocialLink {
   verified: boolean;
 }
 
+/**
+ * WhatsApp ordering target. The printed menu only shows a telephone
+ * number, so the number and its WhatsApp availability both need
+ * confirmation before the strict production gate may pass.
+ */
+export interface WhatsAppConfig {
+  /** International format, digits and a leading +. */
+  number: string;
+  /** Human-readable form shown in the interface. */
+  display: string;
+  verified: boolean;
+  note: string;
+}
+
 export interface SiteConfig {
   restaurantName: string;
   titleName: string;
@@ -63,6 +77,7 @@ export interface SiteConfig {
   };
   phone: string;
   phoneHref: string;
+  whatsapp: WhatsAppConfig;
   email: string | null;
   geo: { lat: number; lng: number };
   mapsUrl: string;

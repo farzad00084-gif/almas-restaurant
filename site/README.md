@@ -2,7 +2,8 @@
 
 Next.js implementation of the approved ALMAS “Facets” design for
 Bahnhofstrasse 92, 5000 Aarau. This is the Stage 5 production port, built
-locally from the approved hybrid prototype.
+locally from the approved hybrid prototype, plus the client-requested
+WhatsApp ordering flow.
 
 > **Not deployable yet.** The site intentionally contains unverified prices,
 > stock photography, missing contact details and draft legal copy. The strict
@@ -68,10 +69,10 @@ All content lives in `src/content/` and is typed in `src/content/types.ts`:
 
 | File | Purpose |
 |---|---|
-| `menu.json` | 6 categories, exactly 60 items, each with DE/EN copy, price data and `priceVerified` |
-| `site.json` | Address, phone, email, hours and social links; unverified fields are empty |
+| `menu.json` | 6 categories, exactly 60 items, each with DE/EN copy, price data, `priceVerified` and an optional `image` |
+| `site.json` | Address, phone, provisional WhatsApp target, email, hours and social links; unverified fields are empty or flagged |
 | `media.json` | Seven images with alt text, credits and `isPlaceholder` flags |
-| `copy.ts` | Bilingual UI, home, menu and legal copy; legal text contains draft markers |
+| `copy.ts` | Bilingual UI, home, menu, ordering and legal copy; legal text contains draft markers |
 | `index.ts` | Typed accessors, localized routes, preview/indexing flags |
 
 `menu.json` was generated from `scripts/menu-data.source.js` by
@@ -93,6 +94,26 @@ When Sanity is connected (pending client account access), `src/content/`
 becomes the seed/import format. The content model is documented in
 `../docs/production/CONTENT-MODEL.md`.
 
+### WhatsApp ordering
+
+- Every menu row opens an item dialog with description, price, quantity and the
+  family option where the printed menu shows one.
+- `menu.json` → `image` must reference a `media.json` entry. When it is `null`,
+  the dialog uses a category stock photo with a visible “placeholder image”
+  badge. Real per-dish photos are required before production.
+- The order lives in `localStorage` under `almas-order-v1`: up to 60 lines,
+  quantities 1–20 and a note of up to 500 characters. There is no server,
+  account or database.
+- `src/components/ordering/order-message.ts` builds the message;
+  `site.json` → `whatsapp` supplies the target number. The guest opens WhatsApp
+  and sends the prepared message manually.
+- The site does not receive, accept, pay for or confirm an order. Do not add
+  claims or UI that suggest otherwise.
+- The strict gate requires `whatsapp.verified: true`. Until ALMAS confirms the
+  number is on WhatsApp, it remains provisional (D-036).
+- The DE/EN privacy drafts describe the local cart and WhatsApp transmission;
+  they still need legal review.
+
 ---
 
 ## 4. Content gate
@@ -110,13 +131,15 @@ price formatting, image references and required fields.
 The strict gate currently fails on these expected blockers:
 
 1. 60 of 60 menu prices are unverified.
-2. 7 of 7 images are stock placeholders.
-3. No verified email address.
-4. No verified opening hours.
-5. Legal copy still contains draft markers.
-6. `NEXT_PUBLIC_SITE_URL` is not the final production domain.
-7. `NEXT_PUBLIC_CONTENT_MODE` is not `production`.
-8. `NEXT_PUBLIC_ALLOW_INDEXING` is not `true`.
+2. 60 of 60 items have no real dish photo; the ordering dialog uses marked category stock.
+3. 7 of 7 images are stock placeholders.
+4. No verified email address.
+5. The WhatsApp ordering number is provisional and not verified.
+6. No verified opening hours.
+7. Legal copy still contains draft markers.
+8. `NEXT_PUBLIC_SITE_URL` is not the final production domain.
+9. `NEXT_PUBLIC_CONTENT_MODE` is not `production`.
+10. `NEXT_PUBLIC_ALLOW_INDEXING` is not `true`.
 
 Unverified social links are a warning only: the footer omits them entirely, so
 no dead buttons ship.
@@ -169,7 +192,7 @@ site/
 │   │   ├── manifest.ts            # Web app manifest
 │   │   ├── robots.ts              # Environment-aware robots.txt
 │   │   └── sitemap.ts             # Localized sitemap
-│   ├── components/                # Header, footer, home, menu, consent map, controls
+│   ├── components/                # Header, footer, home, menu, ordering, consent map, controls
 │   ├── content/                   # Typed content adapter and copy
 │   ├── media/                     # Licensed stock placeholders (7 images)
 │   └── proxy.ts                   # Locale detection and slug canonicalization
@@ -185,13 +208,16 @@ site/
 ## 7. Quality status (19 November 2026)
 
 - `npm run lint`, `npm run typecheck` and `npm run build` pass.
-- Preview validation: 3 passed, 7 expected warnings, 0 failures.
-- Strict validation: fails by design on the 8 launch blockers above.
+- Preview validation: 3 passed, 9 expected warnings, 0 failures.
+- Strict validation: fails by design on the 10 launch blockers above.
 - Headless Chrome QA at 1440×1000 and 390×844 in DE/EN and light/dark:
   no horizontal overflow, no unexpected console errors, all images load.
 - Verified: theme persistence, language switch, mobile menu focus handling,
   consent-gated map, localized redirects, 404 status, manifest, robots,
   sitemap, favicon and security headers.
+- Ordering QA: item dialog and placeholder badge, add/view order, pizza family
+  option and total, `Döner Box` ambiguous price, note text, cart persistence
+  across reload and locale change, clear cart and the WhatsApp message.
 - `npm audit`: 0 vulnerabilities (production and development).
 
 Screenshots and the QA report are outside the repository in the local
@@ -207,8 +233,10 @@ Public deployment is blocked until all of the following exist:
 - Vercel (EU) or Infomaniak hosting access and approved deploy owner.
 - Sanity project/dataset access (or a signed-off decision to keep JSON).
 - Verified menu prices and descriptions.
-- Verified opening hours, email, social URLs and ordering arrangements.
-- Final Impressum and privacy policy approved by the client/legal advisor.
+- Verified opening hours, email and social URLs.
+- Written confirmation that the WhatsApp number is active and may receive orders, plus the order scope.
+- Verified per-dish photography for every orderable item.
+- Final Impressum and privacy policy approved by the client/legal advisor, including the ordering section.
 - Real photography with licences and alt text, replacing every stock image.
 
 The intended production posture is documented in

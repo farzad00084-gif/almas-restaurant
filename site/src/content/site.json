@@ -10,6 +10,12 @@
   },
   "phone": "062 797 50 00",
   "phoneHref": "+41627975000",
+  "whatsapp": {
+    "number": "+41627975000",
+    "display": "062 797 50 00",
+    "verified": false,
+    "note": "Provisional ordering target: the printed menu only shows this telephone number. Confirm that it is on WhatsApp before launch."
+  },
   "email": null,
   "geo": {
     "lat": 47.3924916,

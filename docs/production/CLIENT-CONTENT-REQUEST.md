@@ -3,7 +3,7 @@
 **Project:** ALMAS Restaurant website, Bahnhofstrasse 92, 5000 Aarau
 **Stage:** 4 — Production planning
 **Purpose:** Collect the facts, files and access needed to build and launch the production site
-**Status:** Issued 18 November 2026
+**Status:** Issued 18 November 2026 · updated 19 November 2026 for the WhatsApp ordering flow
 
 Please send what you can in one batch. Items marked **P0** block the build or launch; **P1** are needed before the content freeze; **P2** improve the launch but can follow shortly after.
 
@@ -60,12 +60,26 @@ If the hours are not verified, the site will launch without them. We will not sh
 - [ ] Email address for the website and enquiries.
 - [ ] Who monitors that inbox and how quickly.
 - [ ] Preferred phone number for the site: `062 797 50 00`?
+- [ ] Confirmation that `062 797 50 00` is active on WhatsApp and may receive orders.
+- [ ] Whether WhatsApp orders are for pickup only, delivery, dine-in, or a mix.
+- [ ] Any limits the site must state (minimum order, pickup window), or anything it must not promise.
+- [ ] Who monitors the WhatsApp inbox and within what timeframe.
 - [ ] WhatsApp or other messaging channel, if you want it shown.
 - [ ] Takeaway: yes/no, and how customers order.
 - [ ] Delivery: yes/no, which provider, and the correct link.
 - [ ] Reservations: yes/no, phone or provider.
 - [ ] Online ordering: yes/no, which platform, and the correct link.
 - [ ] Anything the site must **not** promise (for example delivery radius, delivery time, minimum order).
+
+The preview now includes a WhatsApp ordering flow. Guests build an order on the
+device, add an optional note, and press **Send via WhatsApp**. WhatsApp opens
+with a prefilled message which the guest sends from their own account. The site
+does not receive, store or confirm the order.
+
+The target is currently the confirmed phone number `062 797 50 00`, stored as
+`verified: false` because the printed menu only labels it as a telephone number.
+Until you confirm it is on WhatsApp, the production gate fails and the number
+must not be advertised as an ordering channel.
 
 We will not build a fake ordering or reservation flow. We link to a real channel or show the phone.
 
@@ -112,6 +126,8 @@ For a Swiss commercial website, we need:
 - [ ] Any existing Impressum or privacy policy.
 - [ ] Confirmation of whether you want a cookie banner (we recommend avoiding non-essential cookies so one is not needed).
 - [ ] Confirmation of whether you collect any customer data through the site (forms, reservations, newsletter).
+- [ ] Confirmation that the privacy policy may describe the WhatsApp ordering flow as implemented.
+- [ ] Confirmation of how WhatsApp order messages are handled and how long they are kept, so the policy can be accurate.
 - [ ] Your legal advisor's contact, if you have one.
 
 We will draft the pages from your details, but a qualified Swiss advisor should review them before launch. We do not provide legal advice.
@@ -156,6 +172,18 @@ Stock placeholders are fine for preview, but not for launch. We need real photog
 - [ ] Usage rights for web and social, confirmed in writing.
 - [ ] Photographer credit, if required.
 - [ ] Delivery date.
+
+**Per-dish photos for ordering — P0**
+
+Every menu item opens a detail dialog. Until a real photo exists, the dialog
+shows a category stock image with a visible “placeholder image” badge. Launch
+requires real photography for every item that can be ordered.
+
+- [ ] One photo per menu item, named with the item ID (for example `teller-kebab-plate.jpg`, `pizza-pizza-margherita.jpg`).
+- [ ] At least 1600 px on the long edge for the dialog.
+- [ ] The dish as actually served, without props that are not part of the order.
+- [ ] Confirmation that each photo matches the named item.
+- [ ] If fewer than 60 photos are possible, tell us as early as possible; the site cannot pass its production gate until every item has a real photo.
 
 If a professional shoot is not possible, we can discuss a carefully directed phone shoot, but the final quality must be approved before launch.
 
@@ -218,12 +246,12 @@ Vielen Dank für die Freigabe des Light-Mode-Designs. Damit wir die Website prod
 
 1. Verifizierte Speisekarte (6 Kategorien, 60 Gerichte) inklusive Preisen, Beschreibungen und Pizzagrössen.
 2. Öffnungszeiten und Feiertage — oder die Bestätigung, dass keine Zeiten angezeigt werden.
-3. E-Mail-Adresse, Telefonnummer und Angaben zu Takeaway, Lieferung und Reservationen.
+3. E-Mail-Adresse, Telefonnummer, Bestätigung der WhatsApp-Bestellnummer und Angaben zu Takeaway, Lieferung und Reservationen.
 4. Instagram-, Facebook- und TikTok-Links.
 5. Domain, Registrar, DNS und E-Mail-Anbieter.
 6. Rechtliche Angaben: Firmenname, Rechtsform, verantwortliche Person, Impressum und Datenschutz.
 7. Verifizierte Geschichte/Positionierung und die Entscheidung zu afghanischen Gerichten.
-8. Echte Fotos von Essen, Innenraum und Zubereitung mit Nutzungsrechten.
+8. Echte Fotos von Essen, Innenraum und Zubereitung mit Nutzungsrechten — inklusive je einem Foto pro Gericht für die Bestellansicht.
 9. Gewünschtes Analytics (oder keine) und die verantwortliche Kontaktperson für den Launch.
 
 Die vollständige Liste finden Sie im Dokument „ALMAS — Content and Access Request“. Bitte senden Sie Passwörter nicht per E-Mail, sondern über einen Passwortmanager.
@@ -240,12 +268,12 @@ Thank you for approving the light-mode design. To produce and launch the website
 
 1. Verified menu (6 categories, 60 items), including prices, descriptions and pizza sizes.
 2. Opening hours and holidays — or confirmation that no hours should be shown.
-3. Email address, phone number and details for takeaway, delivery and reservations.
+3. Email address, phone number, confirmation of the WhatsApp ordering number, and details for takeaway, delivery and reservations.
 4. Instagram, Facebook and TikTok links.
 5. Domain, registrar, DNS and email provider.
 6. Legal details: legal name, legal form, responsible person, Impressum and privacy policy.
 7. Verified story/positioning and the decision on Afghan dishes.
-8. Real food, interior and preparation photography with usage rights.
+8. Real food, interior and preparation photography with usage rights — including one photo per dish for the ordering view.
 9. Preferred analytics (or none) and the launch approval contact.
 
 The full list is in “ALMAS — Content and Access Request”. Please do not send passwords by email; use a password manager.

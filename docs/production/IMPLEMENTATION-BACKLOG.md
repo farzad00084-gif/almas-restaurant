@@ -18,11 +18,11 @@ wiring, real content, client review and deployment are still missing.
 
 | Epic | Status | Notes |
 |---|---|---|
-| E0 | Blocked | No domain, hosting, CMS, repository or client accounts. |
+| E0 | Partial | Private GitHub repository `farzad00084-gif/almas-restaurant` exists. Domain, hosting, CMS and client-owned accounts are still missing. |
 | E1 | Preview-complete | Next.js 16 + TypeScript, approved CSS ported, self-hosted fonts, layout/header/footer, theme script, DE/EN routing, security headers and preview `noindex`. Missing: CI, formatting, Playwright, preview deployment. |
 | E2 | Partial | Typed JSON adapter, 60-item import from the transcribed source and a strict production gate exist. Sanity schemas, Studio, roles, webhook and editor flow are blocked on account access. |
 | E3 | Preview-complete | Approved hybrid ported: hero, info ribbon, statement, diamond craft, three-dish preview, pide band, origin, consent-gated map, footer, quick bar, DE/EN and themes. Content is not CMS-bound; stock placeholders remain. |
-| E4 | Preview-complete | Server-rendered menu with 6 categories, 60 items, sticky nav, three-image gallery, pide band and CTA; works without JavaScript. Missing: print styles and CMS binding; prices unverified. |
+| E4 | Preview-complete | Server-rendered menu with 6 categories, 60 items, sticky nav, three-image gallery, pide band and CTA; works without JavaScript. Client-requested WhatsApp ordering flow is implemented: item dialog, quantity, pizza family option, cart with localStorage, note field and prefilled message. Missing: print styles, CMS binding, verified prices, verified WhatsApp target and per-dish photos. |
 | E5 | Draft only | Localized Imprint, Privacy and branded 404 exist with working 404 status and footer links. Legal copy is explicitly draft; verified email/legal details are missing. |
 | E6 | Mostly complete | Per-page metadata, canonical/hreflang, Restaurant JSON-LD without hours/ratings, sitemap, robots, manifest, SVG favicon and preview `noindex`. Missing: branded OG image, Search Console/Bing verification, redirect map. |
 | E7 | Partial | Manual keyboard/theme/responsive QA and security headers are done. axe, Lighthouse CI, screen-reader and 200% zoom audits are pending. |
@@ -30,10 +30,11 @@ wiring, real content, client review and deployment are still missing.
 | E9 | Blocked | No hosting, DNS, TLS, monitoring or deploy owner. |
 | E10 | Blocked | Starts after launch. |
 
-**Strict gate:** fails by design on 8 launch blockers — 60 unverified prices,
-7 stock placeholders, missing email, missing hours, draft legal copy, missing
-production URL, preview content mode and indexing disabled. See
-`site/package.json` (`validate:content:strict`) and `site/README.md`.
+**Strict gate:** fails by design on 10 launch blockers — 60 unverified prices,
+60 missing per-dish photos, 7 stock placeholders, missing email, provisional
+WhatsApp number, missing hours, draft legal copy, missing production URL,
+preview content mode and indexing disabled. See `site/package.json`
+(`validate:content:strict`) and `site/README.md`.
 
 ---
 
@@ -204,29 +205,40 @@ The calendar estimate remains about four weeks with parallel content, photograph
 
 ## 7. E4 — Production menu page
 
-**Outcome:** A fast, server-rendered, editor-managed menu.
+**Outcome:** A fast, server-rendered, editor-managed menu with a truthful WhatsApp ordering handoff.
 
 **Tasks**
 
-- [ ] Menu hero and intro.
-- [ ] Three-image gallery from CMS.
-- [ ] Sticky category nav with horizontal active-tab scrolling.
-- [ ] Six category sections rendered from Sanity.
-- [ ] 60 items with prices, descriptions and family prices.
-- [ ] Pide band.
-- [ ] Contact CTA.
-- [ ] Footer.
-- [ ] Both languages and themes.
-- [ ] No-JavaScript rendering for all menu content.
+- [x] Menu hero and intro.
+- [x] Three-image gallery from the local content adapter.
+- [x] Sticky category nav with horizontal active-tab scrolling.
+- [x] Six category sections rendered from the local adapter.
+- [x] 60 items with prices, descriptions and family prices.
+- [x] Pide band.
+- [x] Contact CTA.
+- [x] Footer.
+- [x] Both languages and themes.
+- [x] No-JavaScript rendering for all menu content.
+- [x] Item detail dialog with photo, description, quantity and pizza family option.
+- [x] Cart with localStorage persistence, quantity editing, optional note and running total.
+- [x] Prefilled WhatsApp message to the configured number; the guest sends it manually.
+- [x] Visible placeholder badge wherever a category stock image stands in for a dish.
 - [ ] Print-friendly styles.
+- [ ] Bind menu and item photos to Sanity once the project exists.
+- [ ] Confirm the WhatsApp number and order scope in writing.
+- [ ] Replace every category fallback with a real per-dish photo.
 
 **Acceptance**
 
-- 6 categories and 60 items render from CMS.
-- Menu works with JavaScript disabled.
+- 6 categories and 60 items render from the content source.
+- Menu works with JavaScript disabled; ordering is an enhancement.
 - Sticky nav works; page does not jump on load.
 - Prices match the verified source exactly.
 - No horizontal overflow at 320/390/768/1440 px.
+- Ordering works in DE/EN and both themes; the cart survives reload and language change.
+- The WhatsApp link opens the verified number with every line, option and note.
+- The site never claims to receive, accept, pay for or confirm an order.
+- Every stock image is visibly marked; real dish photos replace it before launch.
 
 **Dependencies:** E1, E2; verified menu.
 
@@ -292,6 +304,8 @@ The calendar estimate remains about four weeks with parallel content, photograph
 **Tasks**
 
 - [ ] Keyboard pass on all interactive components.
+- [ ] Dialog focus trap, Escape close and focus return.
+- [ ] Screen-reader announcement for add-to-order and cart updates.
 - [ ] Screen-reader spot check (VoiceOver/NVDA).
 - [ ] Contrast audit in both themes.
 - [ ] 200% zoom and 320 px reflow.
@@ -323,6 +337,7 @@ The calendar estimate remains about four weeks with parallel content, photograph
 
 - [ ] Full Playwright suite across pages, languages and themes.
 - [ ] Mobile menu, sticky nav, theme persistence and language switch.
+- [ ] Item dialog, family option, cart persistence, note and WhatsApp link.
 - [ ] 60-item count and category counts.
 - [ ] Link checker.
 - [ ] Structured-data validation.

@@ -8,6 +8,9 @@ import { images } from "@/content/images";
 import { menuPageCopy } from "@/content/copy";
 import type { Locale, MenuCategory } from "@/content/types";
 import { MenuNav } from "./MenuNav";
+import { MenuItemButton } from "./ordering/MenuItemButton";
+import { OrderingProvider } from "./ordering/OrderingContext";
+import { resolveItemPhoto } from "./ordering/photo";
 import { DisplayHeadline, SectionLabel } from "./Typography";
 
 function MenuSection({
@@ -35,36 +38,19 @@ function MenuSection({
         </div>
 
         <div className="menu-list">
-          {category.items.map((item) => (
-            <article className="menu-item" key={item.id}>
-              <div className="menu-item-main">
-                <h3 className="menu-item-name">{item.name[locale]}</h3>
-                {item.description ? (
-                  <p className="menu-item-desc">
-                    {item.description[locale]}
-                  </p>
-                ) : null}
-              </div>
-              <div className="menu-item-price">
-                <span className="menu-item-amount">
-                  <span className="sr-only">CHF </span>
-                  {item.priceDisplay}
-                </span>
-                {item.familyPriceDisplay && item.familyLabel ? (
-                  <span className="price-family">
-                    <span aria-hidden="true">
-                      {item.familyLabel[locale]} ·{" "}
-                      {item.familyPriceDisplay}
-                    </span>
-                    <span className="sr-only">
-                      {item.familyLabel[locale]}, CHF{" "}
-                      {item.familyPriceDisplay}
-                    </span>
-                  </span>
-                ) : null}
-              </div>
-            </article>
-          ))}
+          {category.items.map((item) => {
+            const photo = resolveItemPhoto(item, category.id);
+            return (
+              <MenuItemButton
+                key={item.id}
+                item={item}
+                categoryTitle={category.title}
+                locale={locale}
+                photoId={photo.photoId}
+                photoIsPlaceholder={photo.photoIsPlaceholder}
+              />
+            );
+          })}
           {category.footnote ? (
             <p className="menu-source">{category.footnote[locale]}</p>
           ) : null}
@@ -86,7 +72,7 @@ export function MenuPage({ locale }: { locale: Locale }) {
   const bottomCategories = menu.categories.slice(3);
 
   return (
-    <>
+    <OrderingProvider locale={locale}>
       <section className="menu-hero">
         <div className="container menu-hero-grid">
           <div>
@@ -130,6 +116,18 @@ export function MenuPage({ locale }: { locale: Locale }) {
           title: category.title,
         }))}
       />
+
+      <div className="container">
+        <p className="menu-order-hint">
+          <span className="diamond" aria-hidden="true" />
+          <span>{copy.ordering.hint}</span>
+        </p>
+        <noscript>
+          <p className="menu-order-hint menu-order-noscript">
+            {copy.ordering.noscript}
+          </p>
+        </noscript>
+      </div>
 
       {topCategories.map((category, index) => (
         <MenuSection
@@ -179,6 +177,6 @@ export function MenuPage({ locale }: { locale: Locale }) {
           <p className="prototype-note">{copy.cta.note}</p>
         </div>
       </section>
-    </>
+    </OrderingProvider>
   );
 }

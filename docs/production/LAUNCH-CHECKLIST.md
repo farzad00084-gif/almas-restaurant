@@ -28,6 +28,10 @@
 | 1.15 | No “best”, “award-winning”, rating or review claims without evidence | Must | Agency | Copy audit |
 | 1.16 | German and English both complete and reviewed | Must | ALMAS / translator | Preview review |
 | 1.17 | No placeholder text, “TODO”, lorem ipsum or dummy links | Must | Agency | Automated scan |
+| 1.18 | WhatsApp ordering number confirmed in writing and active on WhatsApp | Must | ALMAS | Written confirmation + test message |
+| 1.19 | Order scope confirmed: pickup, delivery, dine-in or a mix, including what the site must not promise | Must | ALMAS | Written confirmation |
+| 1.20 | A real photo exists for every menu item; the strict gate fails while any is missing or still points to stock | Must | ALMAS / photographer | Asset register |
+| 1.21 | Döner Box price ambiguity resolved for ordering, or the item is excluded from the numeric total and flagged in the message | Must | ALMAS / agency | Menu note + cart test |
 
 ---
 
@@ -55,6 +59,11 @@
 | 2.18 | Phone links work on iOS and Android | Must | Agency | Device test |
 | 2.19 | 404 page is branded and useful | Should | Agency | Manual check |
 | 2.20 | Print stylesheet is acceptable (menu may be printed) | Should | Agency | Print preview |
+| 2.21 | Clicking a menu item opens the detail dialog with photo, price, quantity and family option where applicable | Must | Agency | E2E test |
+| 2.22 | Cart survives reload and language change, can be cleared and never exceeds the quantity limits | Must | Agency | E2E test |
+| 2.23 | WhatsApp message contains every line, quantity, option, price and note, with no false confirmation | Must | Agency | Link inspection |
+| 2.24 | Every stock item image is visibly marked as a placeholder | Must | Agency | Visual check |
+| 2.25 | Cart and dialogs remain usable at 320 px and 200% zoom | Must | Agency | Manual check |
 
 ---
 
@@ -79,6 +88,8 @@ Target: WCAG 2.2 AA.
 | 3.13 | Screen-reader spot check on home and menu | Should | Agency | VoiceOver/NVDA notes |
 | 3.14 | No link opens a new tab without warning | Should | Agency | Manual audit |
 | 3.15 | Error messages are announced, if a form is added | Must if form | Agency | Test |
+| 3.16 | Item and cart dialogs trap focus, close with Escape and return focus to the trigger | Must | Agency | Keyboard test |
+| 3.17 | Add-to-order status, cart totals and quantity changes are announced to screen readers | Must | Agency | Screen-reader notes |
 
 ---
 
@@ -141,6 +152,9 @@ Target: WCAG 2.2 AA.
 | 6.10 | Privacy contact address monitored | Must | ALMAS | Test email |
 | 6.11 | Terms/ordering information present only if verified | Must | ALMAS | Content audit |
 | 6.12 | Accessibility statement considered (recommended, not always required) | Should | Agency | Page or note |
+| 6.13 | Privacy policy discloses local cart storage and transmission to WhatsApp | Must | ALMAS / legal | Page review |
+| 6.14 | No order, payment, delivery or confirmation promise is made beyond verified arrangements | Must | Agency / ALMAS | Content audit |
+| 6.15 | The WhatsApp inbox is monitored and order handling is confirmed in writing | Must | ALMAS | Written confirmation |
 
 ---
 
@@ -202,6 +216,9 @@ Target: WCAG 2.2 AA.
 | 9.12 | No mixed-content warnings | Must | Agency | Browser console |
 | 9.13 | Mobile quick-action bar does not cover content | Must | Agency | Device test |
 | 9.14 | Final client sign-off recorded | Must | ALMAS | Email |
+| 9.15 | Add an item, reload, switch language and reopen the cart; the order persists | Must | Agency | Manual check |
+| 9.16 | The WhatsApp link opens the correct number with the complete order on a real phone | Must | ALMAS / agency | Device test |
+| 9.17 | No placeholder photo badge remains on an orderable dish | Must | Agency | Visual check |
 
 ---
 
@@ -236,6 +253,8 @@ Target: WCAG 2.2 AA.
 
 - Run the full smoke test on the release candidate.
 - Re-check legal pages, menu prices, phone and email.
+- Re-check the WhatsApp number, the order scope and the privacy text.
+- Test the cart and the WhatsApp message on iOS and Android.
 - Confirm monitoring and alert recipients.
 - Confirm the production environment variables.
 - Take a final CMS export.
@@ -251,9 +270,10 @@ Target: WCAG 2.2 AA.
 5. Run the production smoke test: home, menu, legal, 404, DE/EN, light/dark.
 6. Verify 60 items and category counts.
 7. Test phone, email, social links and map consent.
-8. Confirm analytics and error tracking receive data.
-9. Submit the sitemap.
-10. Announce launch to ALMAS.
+8. Add an item to the cart and open the WhatsApp message on a real phone.
+9. Confirm analytics and error tracking receive data.
+10. Submit the sitemap.
+11. Announce launch to ALMAS.
 
 ### T+1 hour
 
@@ -289,6 +309,8 @@ Rollback is a Vercel promotion of the previous deployment plus, if needed, a CMS
 
 - every **Must** item is checked or explicitly waived in writing by ALMAS;
 - no placeholder image, price or social link remains;
+- the WhatsApp ordering number and order scope are confirmed in writing;
+- every orderable dish has a real photo;
 - legal pages are published and approved;
 - the final smoke test passes on production;
 - ALMAS signs off in writing.

@@ -415,6 +415,57 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
 };
 
+export interface OrderingCopy {
+  hint: string;
+  noscript: string;
+  detailsAria: string;
+  action: string;
+  dialog: {
+    close: string;
+    quantity: string;
+    decrease: string;
+    increase: string;
+    add: string;
+    added: string;
+    viewOrder: string;
+    placeholderPhoto: string;
+    noDescription: string;
+    priceNote: string;
+    sizeLabel: string;
+    unknownPrice: string;
+  };
+  cart: {
+    title: string;
+    close: string;
+    open: string;
+    empty: string;
+    emptyBody: string;
+    noteLabel: string;
+    notePlaceholder: string;
+    total: string;
+    totalPartial: string;
+    unknownLine: string;
+    remove: string;
+    clear: string;
+    send: string;
+    sendHint: string;
+    priceNote: string;
+    backToMenu: string;
+    itemOne: string;
+    itemMany: string;
+  };
+  message: {
+    greeting: string;
+    intro: string;
+    total: string;
+    totalPartial: string;
+    unknownPrice: string;
+    noteLabel: string;
+    confirmation: string;
+    thanks: string;
+  };
+}
+
 export interface MenuPageCopy {
   meta: { title: string; description: string };
   hero: {
@@ -425,6 +476,7 @@ export interface MenuPageCopy {
     note: string;
   };
   galleryAria: string;
+  ordering: OrderingCopy;
   cta: {
     eyebrow: string;
     headline: Headline;
@@ -449,6 +501,65 @@ export const menuPageCopy: Record<Locale, MenuPageCopy> = {
       note: "Preise in CHF · Stand November 2026 · Änderungen vorbehalten",
     },
     galleryAria: "Einblicke in die Küche",
+    ordering: {
+      hint: "Tippen Sie auf ein Gericht: Details, Foto und Bestellung.",
+      noscript:
+        "Die Bestellfunktion benötigt JavaScript. Telefonisch erreichen Sie uns unter 062 797 50 00.",
+      detailsAria: "Details und Bestellung",
+      action: "Bestellen",
+      dialog: {
+        close: "Schliessen",
+        quantity: "Menge",
+        decrease: "Menge verringern",
+        increase: "Menge erhöhen",
+        add: "Zur Bestellung hinzufügen",
+        added: "Zur Bestellung hinzugefügt.",
+        viewOrder: "Bestellung ansehen",
+        placeholderPhoto: "Platzhalterbild — kein Foto dieses Gerichts.",
+        noDescription:
+          "Die gedruckte Karte nennt zu diesem Gericht keine weiteren Angaben.",
+        priceNote: "Preis gemäss gedruckter Karte, noch nicht bestätigt.",
+        sizeLabel: "Ausführung",
+        unknownPrice:
+          "Auf der Karte steht ein doppelter Preis. Der einzelne Preis ist nicht eindeutig; bitte im Restaurant bestätigen.",
+      },
+      cart: {
+        title: "Ihre Bestellung",
+        close: "Schliessen",
+        open: "Bestellung ansehen",
+        empty: "Noch nichts ausgewählt.",
+        emptyBody:
+          "Tippen Sie in der Speisekarte auf ein Gericht, um es hinzuzufügen.",
+        noteLabel: "Anmerkung (optional)",
+        notePlaceholder: "z. B. ohne Zwiebeln, ohne scharfe Sauce",
+        total: "Total gemäss Website",
+        totalPartial: "Teiltotal der Positionen mit Einzelpreis",
+        unknownLine:
+          "Für diese Position ist auf der Karte kein einzelner Preis angegeben.",
+        remove: "Entfernen",
+        clear: "Bestellung leeren",
+        send: "Über WhatsApp senden",
+        sendHint:
+          "WhatsApp öffnet sich mit einer vorbereiteten Nachricht. Sie senden sie dort selbst ab.",
+        priceNote:
+          "Die Preise auf dieser Website sind noch nicht bestätigt. Bitte prüfen Sie die Nachricht vor dem Senden.",
+        backToMenu: "Weiter zur Karte",
+        itemOne: "1 Position",
+        itemMany: "Positionen",
+      },
+      message: {
+        greeting: "Hallo ALMAS",
+        intro: "ich möchte folgende Bestellung aufgeben:",
+        total: "Total gemäss Website (noch nicht bestätigt)",
+        totalPartial:
+          "Teiltotal der Positionen mit Einzelpreis (noch nicht bestätigt)",
+        unknownPrice:
+          "Hinweis: Für diese Position ist auf der Karte kein einzelner Preis angegeben:",
+        noteLabel: "Anmerkung",
+        confirmation: "Bitte bestätigen Sie mir Verfügbarkeit und Preis.",
+        thanks: "Vielen Dank.",
+      },
+    },
     cta: {
       eyebrow: "Fragen zur Karte",
       headline: { lead: "Lieber direkt", accent: "fragen?" },
@@ -471,6 +582,63 @@ export const menuPageCopy: Record<Locale, MenuPageCopy> = {
       note: "Prices in CHF · As of November 2026 · Subject to change",
     },
     galleryAria: "Impressions from the kitchen",
+    ordering: {
+      hint: "Tap a dish for details, a photo and ordering.",
+      noscript:
+        "Ordering needs JavaScript. You can reach us by phone on 062 797 50 00.",
+      detailsAria: "Details and ordering",
+      action: "Order",
+      dialog: {
+        close: "Close",
+        quantity: "Quantity",
+        decrease: "Decrease quantity",
+        increase: "Increase quantity",
+        add: "Add to order",
+        added: "Added to your order.",
+        viewOrder: "View order",
+        placeholderPhoto: "Placeholder image — not a photo of this dish.",
+        noDescription:
+          "The printed menu gives no further details for this dish.",
+        priceNote: "Price as printed on the menu, not yet confirmed.",
+        sizeLabel: "Option",
+        unknownPrice:
+          "The menu shows two prices. The individual price is not clear; please confirm it with the restaurant.",
+      },
+      cart: {
+        title: "Your order",
+        close: "Close",
+        open: "View order",
+        empty: "Nothing selected yet.",
+        emptyBody: "Tap a dish on the menu to add it.",
+        noteLabel: "Note (optional)",
+        notePlaceholder: "e.g. no onions, no hot sauce",
+        total: "Total as shown on the website",
+        totalPartial: "Subtotal for items with a single price",
+        unknownLine: "The menu does not give a single price for this item.",
+        remove: "Remove",
+        clear: "Clear order",
+        send: "Send via WhatsApp",
+        sendHint:
+          "WhatsApp opens with a prepared message. You send it yourself there.",
+        priceNote:
+          "The prices on this website are not yet confirmed. Please check the message before sending.",
+        backToMenu: "Back to the menu",
+        itemOne: "1 item",
+        itemMany: "items",
+      },
+      message: {
+        greeting: "Hello ALMAS",
+        intro: "I would like to place the following order:",
+        total: "Total as shown on the website (not yet confirmed)",
+        totalPartial:
+          "Subtotal for items with a single price (not yet confirmed)",
+        unknownPrice:
+          "Note: the menu does not give a single price for:",
+        noteLabel: "Note",
+        confirmation: "Please confirm availability and price.",
+        thanks: "Thank you.",
+      },
+    },
     cta: {
       eyebrow: "Questions about the menu",
       headline: { lead: "Rather ask", accent: "directly?" },
@@ -574,7 +742,7 @@ export const legalCopy: Record<
       draftNotice:
         "Entwurf — nicht veröffentlichen. Hosting-Anbieter, Rechtsgrundlagen und die endgültige Kontaktadresse für Datenschutzanfragen sind noch zu bestätigen.",
       lastUpdatedLabel: "Entwurfsstand",
-      lastUpdated: "18. November 2026",
+      lastUpdated: "19. November 2026",
       sections: [
         {
           id: "verantwortlich",
@@ -596,6 +764,14 @@ export const legalCopy: Record<
           heading: "Sprache und Farbmodus",
           paragraphs: [
             "Die Website speichert die gewählte Sprache in einem funktionalen Cookie und den Farbmodus im lokalen Speicher des Browsers. Diese Angaben bleiben auf dem Gerät und werden nicht an ALMAS gesendet. Es werden keine Marketing- oder Analyse-Cookies gesetzt.",
+          ],
+        },
+        {
+          id: "bestellung",
+          heading: "Bestellung über WhatsApp",
+          paragraphs: [
+            "Die Bestellfunktion speichert Ihre Auswahl und eine allfällige Anmerkung im lokalen Speicher Ihres Browsers, damit die Bestellung beim nächsten Besuch erhalten bleibt. Diese Angaben bleiben auf Ihrem Gerät und werden nicht an einen Server dieser Website übermittelt. Mit «Bestellung leeren» können Sie sie jederzeit löschen.",
+            "Erst wenn Sie «Über WhatsApp senden» anklicken, öffnet sich WhatsApp mit einer vorbereiteten Nachricht. Sie senden diese Nachricht dort selbst ab. Dabei werden der Nachrichteninhalt und Ihre Telefonnummer an WhatsApp übermittelt; für diese Übermittlung gelten die Datenschutzbestimmungen von WhatsApp. Über diese Website wird keine Bestellung entgegengenommen, gespeichert oder bestätigt.",
           ],
         },
         {
@@ -705,7 +881,7 @@ export const legalCopy: Record<
       draftNotice:
         "Draft — do not publish. The hosting provider, legal bases and the final contact address for privacy requests are still to be confirmed.",
       lastUpdatedLabel: "Draft date",
-      lastUpdated: "18 November 2026",
+      lastUpdated: "19 November 2026",
       sections: [
         {
           id: "controller",
@@ -727,6 +903,14 @@ export const legalCopy: Record<
           heading: "Language and colour mode",
           paragraphs: [
             "The website stores the selected language in a functional cookie and the colour mode in the browser's local storage. This information stays on the device and is not sent to ALMAS. No marketing or analytics cookies are set.",
+          ],
+        },
+        {
+          id: "ordering",
+          heading: "Ordering via WhatsApp",
+          paragraphs: [
+            "The ordering feature stores your selection and any note in your browser's local storage so the order survives your next visit. This information stays on your device and is not sent to a server operated by this website. You can delete it at any time with “Clear order”.",
+            "Only when you click “Send via WhatsApp” does WhatsApp open with a prepared message. You send that message yourself there. The message content and your phone number are then transmitted to WhatsApp; WhatsApp's own privacy policy applies to that transmission. No order is received, stored or confirmed through this website.",
           ],
         },
         {

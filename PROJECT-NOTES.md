@@ -3,7 +3,7 @@
 **Project:** Premium restaurant website for ALMAS, Aarau, Switzerland
 **Current stage:** Stage 5 in progress — production app built locally; not deployable yet
 **Last updated:** 2026-11-19
-**Code status:** Next.js production app in `site/` builds and runs locally. Preview mode works in DE/EN and light/dark. The strict production content gate fails on known launch blockers. No CMS, Git repository, deployment or public URL yet.
+**Code status:** Next.js production app in `site/` builds and runs locally. Preview mode works in DE/EN and light/dark, including the client-requested WhatsApp ordering flow. The strict production content gate fails on known launch blockers. A private GitHub repository exists; no CMS, deployment or public URL yet.
 
 ---
 
@@ -41,14 +41,14 @@ The menu has been transcribed from the supplied photographs (see `docs/content/m
 | # | Item | Status | Notes |
 |---|---|---|---|
 | 1 | Existing logo / brand files | Resolved | No vector file. Client gives agency freedom to recreate/refine. Menu cover is the visual reference. |
-| 2 | Real food photography | Resolved for prototype | None supplied. Licensed stock authorised for prototype; real menu photography required pre-launch. |
+| 2 | Real food photography | Resolved for prototype | None supplied. Licensed stock is used for the prototype only; a real photo per orderable dish is required before launch (D-008, D-038). |
 | 3 | Real interior / team / preparation photography | Partly resolved | No professional photos. Client-provided interior video exists. Professional interior photos to be requested at Stage 5. Team photos not required. |
 | 4 | Accurate menu with categories, descriptions, prices | Transcribed | Source in `docs/content/menu-source.md`; client to verify before launch |
 | 5 | Allergens / dietary labels | Pending | Only publish if verified |
-| 6 | Phone, email, WhatsApp | Phone confirmed; rest pending | Phone: 062 797 50 00 |
+| 6 | Phone, email, WhatsApp | Phone confirmed; WhatsApp provisional | Phone: 062 797 50 00. The site uses the same number as a provisional WhatsApp target (`verified: false`) until ALMAS confirms it is active on WhatsApp and may receive orders (D-036). Email still pending. |
 | 7 | Instagram, Facebook, TikTok links | Partly resolved | Disabled placeholder buttons exist on the hybrid, menu and archive pages; real URLs still needed (D-023) |
 | 8 | Opening hours, including holidays | Pending | Hours removed everywhere until the client supplies verified times (D-020) |
-| 9 | Takeaway / delivery / reservations / online ordering | Pending | Must not build fake ordering |
+| 9 | Takeaway / delivery / reservations / online ordering | Partly resolved | A WhatsApp handoff is implemented (D-037), but the order scope (pickup, delivery, dine-in) and acceptance process still need written confirmation. No payment, delivery promise or order confirmation is made. |
 | 10 | Existing website, domain, hosting, Google Business Profile | Pending | Need access/ownership details |
 | 11 | Required languages beyond Swedish and English | Resolved for prototypes | German + English approved for the Stage 2 and Stage 3 prototypes; Swedish deferred to a proper translation pass |
 | 12 | Verified restaurant story / history / owner details | Partly resolved | Generic brand copy approved for the prototype (D-022); verified history still pending |
@@ -71,7 +71,7 @@ The menu has been transcribed from the supplied photographs (see `docs/content/m
 | npm | 11.6.2 — suitable |
 | Git | 2.43.0 — available |
 | pnpm | Not installed — not required; npm is sufficient |
-| Git repository | Not initialized yet — will be initialized at development stage |
+| Git repository | Initialised and pushed to the private GitHub repository `farzad00084-gif/almas-restaurant` (`main`) |
 | Internet access | Available for approved research and asset sourcing |
 
 **Assessment:** The environment is ready for a modern Next.js project. The Stage 2 prototypes are plain HTML/CSS/JS and do not prescribe the production stack. Stage 4 recommends Next.js + TypeScript with the approved CSS system ported directly (D-028). The Stage 5 app now exists in `site/`, but it runs in preview mode only and must not be deployed until the content gates pass.
@@ -117,6 +117,9 @@ The menu has been transcribed from the supplied photographs (see `docs/content/m
 | D-033 | Build and review the Stage 5 production site locally, without a public deployment, until the strict content gate passes | Active 2026-11-19 |
 | D-034 | Use the typed local JSON adapter in `site/src/content/` as the staging content source until a Sanity project exists; it remains the import format for the CMS | Active 2026-11-19 |
 | D-035 | Preview builds must show unverified prices, stock images, draft legal copy and missing contact details exactly as marked; production builds must fail while any of these remain | Implemented 2026-11-19 |
+| D-036 | Use the confirmed phone number `+41627975000` as the provisional WhatsApp ordering target, stored with `verified: false` because the printed menu only labels it as a telephone number | Provisional 2026-11-19 |
+| D-037 | Ordering is a client-side cart in localStorage plus a prefilled `https://wa.me/41627975000?text=…` link; the guest sends the message manually. No backend, payment, delivery promise or order confirmation | Implemented 2026-11-19 |
+| D-038 | Until real per-dish photography exists, the item dialog uses category stock with a visible “Platzhalterbild” badge; production requires real item photos | Implemented 2026-11-19 |
 
 ---
 
@@ -287,7 +290,7 @@ Detailed request with owners, priorities and an email template: `docs/production
 
 ## 9. Stage 4 — Production planning (complete, awaiting sign-off)
 
-**Status:** Complete 18 November 2026. Planning only at that time. Local Stage 5 implementation began 19 November 2026 under D-033; no CMS workspace, repository or deployment has been created.
+**Status:** Complete 18 November 2026. Planning only at that time. Local Stage 5 implementation began 19 November 2026 under D-033; a private GitHub repository now exists, but no CMS workspace or deployment has been created.
 
 **Deliverables**
 
@@ -328,7 +331,7 @@ Detailed request with owners, priorities and an email template: `docs/production
 
 ## 10. Stage 5 — Production implementation (in progress, local only)
 
-**Status:** In progress 19 November 2026. The production app is built in `site/` and passes lint, type-check and the preview build. It runs locally only. No Git repository, CMS workspace, hosting, deployment or public URL exists.
+**Status:** In progress 19 November 2026. The production app is built in `site/` and passes lint, type-check and the preview build. It runs locally only. The private GitHub repository is connected; no CMS workspace, hosting, deployment or public URL exists.
 
 ### Implemented
 
@@ -339,8 +342,9 @@ Detailed request with owners, priorities and an email template: `docs/production
 | Pages | Home, menu, imprint and privacy in DE/EN, branded 404 with HTTP 404 |
 | Routing | `/de` default, `/en` secondary, localized menu/legal slugs, canonical redirects in `src/proxy.ts` |
 | Components | Header, mobile menu with focus lock, footer, language switcher, theme toggle, quick bar, reveal, consent-gated OpenStreetMap, menu scroll-spy |
-| Content | Typed JSON adapter: 6 categories, exactly 60 items, bilingual copy and legal draft copy |
-| Content gate | Preview validation (warnings) and strict production gate (failures) in `scripts/validate-content.mjs` |
+| Ordering | Click-to-open item dialog with category stock marked as a placeholder, quantity and pizza family option, localStorage cart, optional note, running total and a prefilled WhatsApp message. No payment, delivery promise or confirmation. |
+| Content | Typed JSON adapter: 6 categories, exactly 60 items, bilingual copy, legal draft copy and a provisional WhatsApp target |
+| Content gate | Preview validation (warnings) and strict production gate (failures) in `scripts/validate-content.mjs`, including dish photography and WhatsApp verification |
 | Build | Preview build and `build:production`, which requires production env vars and a passing gate |
 | SEO | Per-page metadata, canonical/hreflang, Restaurant JSON-LD without hours or ratings, sitemap, robots, manifest, SVG favicon |
 | Privacy | Self-hosted fonts, click-to-load map, no ad pixels; preview builds are `noindex` |
@@ -349,11 +353,12 @@ Detailed request with owners, priorities and an email template: `docs/production
 ### QA completed
 
 - `npm run lint`, `npm run typecheck` and `npm run build` pass.
-- Preview content validation: 3 passed, 7 expected warnings, 0 failures.
-- Strict validation fails by design on 8 launch blockers.
+- Preview content validation: 3 passed, 9 expected warnings, 0 failures.
+- Strict validation fails by design on 10 launch blockers.
 - `npm audit`: 0 vulnerabilities in production and development dependencies.
 - Headless Chrome at 1440×1000 and 390×844 in DE/EN and light/dark: no horizontal overflow, no unexpected console errors, all seven images load.
 - Verified interactions: theme toggle and persistence, language switching, mobile menu open/close and focus lock, consent-gated map, localized redirects, 404 status, manifest/robots/sitemap and favicon.
+- Ordering QA in Chrome: item dialog and placeholder badge, add/view order, family pizza option and total, Döner Box ambiguous price, note text, DE cart persistence across reload and locale change, clear cart, WhatsApp link and message content. No console errors.
 - Visual comparison against `prototypes/hybrid.html` confirms the approved hybrid is preserved.
 
 QA screenshots and the report are in the local workspace at
@@ -362,32 +367,35 @@ QA screenshots and the report are in the local workspace at
 ### Strict-gate launch blockers
 
 1. All 60 menu prices are unverified.
-2. All 7 images are stock placeholders.
-3. No verified email address.
-4. No verified opening hours.
-5. Legal copy still contains draft markers.
-6. No final production domain (`NEXT_PUBLIC_SITE_URL`).
-7. Production content mode not set.
-8. Indexing not enabled.
+2. All 60 items have no real dish photo; the ordering dialog shows marked category stock.
+3. All 7 images are stock placeholders.
+4. No verified email address.
+5. The WhatsApp ordering number is provisional and not verified.
+6. No verified opening hours.
+7. Legal copy still contains draft markers.
+8. No final production domain (`NEXT_PUBLIC_SITE_URL`).
+9. Production content mode not set.
+10. Indexing not enabled.
 
 Unverified social links are hidden by the footer, so no disabled buttons exist in the production markup.
 
 ### Not started or blocked
 
 - Sanity Studio and dataset (no account/project).
-- Git repository, CI and hosting/DNS (no client-owned accounts).
-- Real photography and final OG image.
-- Verified menu, hours, email, social links and ordering details.
-- Final Impressum/privacy review.
+- CI and hosting/DNS (no client-owned hosting accounts).
+- Real photography, per-dish ordering photos and final OG image.
+- Verified menu, hours, email and social links.
+- WhatsApp confirmation, order scope and acceptance process.
+- Final Impressum/privacy review, including the ordering section.
 - Full axe/Lighthouse CI and screen-reader pass.
 - Analytics decision and monitoring.
 
 ### Next steps
 
 1. Client reviews the local preview (`cd site && npm run dev`) and the Stage 5 backlog.
-2. Client supplies verified content, photography and legal details from `docs/production/CLIENT-CONTENT-REQUEST.md`.
+2. Client confirms the WhatsApp number/order scope and supplies verified content, per-dish photography and legal details from `docs/production/CLIENT-CONTENT-REQUEST.md`.
 3. When Sanity access exists, create the schema/Studio, import the 60 items and switch the adapter.
-4. When account ownership is agreed, initialise Git, CI and a private preview deployment.
+4. When hosting access is agreed, connect CI and a private preview deployment to the existing repository.
 5. Re-run the strict gate; deploy only after every “Must” item in `docs/production/LAUNCH-CHECKLIST.md` passes.
 
 ---
