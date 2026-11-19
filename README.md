@@ -61,13 +61,14 @@ that folder as its root.
 3. Keep the framework preset as **Next.js**.
 4. For a review/staging deployment, leave the environment variables unset. The
    build runs in preview mode with `noindex` and the preview ribbon.
-5. For a public production deployment, set the variables from
-   `site/.env.example` and make the build command `npm run build:production`.
-   That command enforces the strict content gate and currently fails by design.
-
-Do not set `NEXT_PUBLIC_CONTENT_MODE=production` while using the default
-`npm run build`; that would bypass the strict content gate. No custom domain
-should be connected until the launch checklist is signed off.
+5. For a public production deployment, set all variables from
+   `site/.env.example` and keep the default build command `npm run build`.
+   The content validator switches to strict mode whenever
+   `NEXT_PUBLIC_CONTENT_MODE=production`, so the build fails until every launch
+   blocker is resolved. `npm run build:production` is the equivalent local
+   command.
+6. Never enable `NEXT_PUBLIC_ALLOW_INDEXING` without production content mode,
+   and never connect the final domain before the launch checklist is signed off.
 
 ## Production references
 
