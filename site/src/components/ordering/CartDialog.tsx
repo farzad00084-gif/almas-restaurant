@@ -1,12 +1,9 @@
 "use client";
 
-import siteJson from "@/content/site.json";
-import type { SiteConfig } from "@/content/types";
+import { site } from "@/content";
 import { useEffect, useRef } from "react";
 import { buildOrderMessage, formatChf } from "./order-message";
 import { MAX_ORDER_QTY, useOrdering } from "./OrderingContext";
-
-const site = siteJson as SiteConfig;
 
 export function CartDialog() {
   const {
