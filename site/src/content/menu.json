@@ -1,0 +1,1196 @@
+{
+  "version": "2026-11",
+  "source": "docs/content/menu-source.md",
+  "generatedFrom": "prototypes/assets/js/menu-data.js",
+  "priceVerified": false,
+  "categories": [
+    {
+      "id": "teller",
+      "order": 1,
+      "title": {
+        "de": "Teller",
+        "en": "Plates"
+      },
+      "note": null,
+      "footnote": {
+        "de": "Poulet: CH / Brasilien · Lamm: Neuseeland / Australien · Rind / Kalb: CH · Salami / Vorderschinken / Speck: CH · Pangasius / Crevetten: Vietnam. Angaben gemäss gedruckter Speisekarte.",
+        "en": "Chicken: CH / Brazil · Lamb: New Zealand / Australia · Beef / veal: CH · Salami / ham / bacon: CH · Pangasius / prawns: Vietnam. As printed on the menu."
+      },
+      "items": [
+        {
+          "id": "teller-kebab-plate",
+          "order": 1,
+          "name": {
+            "de": "Kebab Teller",
+            "en": "Kebab plate"
+          },
+          "description": {
+            "de": "Mit Pommes Frites und Salat.",
+            "en": "With fries and salad."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-falafel-plate",
+          "order": 2,
+          "name": {
+            "de": "Falafel Teller",
+            "en": "Falafel plate"
+          },
+          "description": {
+            "de": "10 Stück, mit Pommes Frites und Salat.",
+            "en": "10 pieces, with fries and salad."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-grilled-lamb-plate",
+          "order": 3,
+          "name": {
+            "de": "Grill Lamm Teller",
+            "en": "Grilled lamb plate"
+          },
+          "description": {
+            "de": "Mit Pommes Frites und Salat.",
+            "en": "With fries and salad."
+          },
+          "priceDisplay": "18.00",
+          "priceNumeric": 1800,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-grilled-chicken-plate",
+          "order": 4,
+          "name": {
+            "de": "Grill Poulet Teller",
+            "en": "Grilled chicken plate"
+          },
+          "description": {
+            "de": "Mit Pommes Frites und Salat.",
+            "en": "With fries and salad."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-cevapcici-plate",
+          "order": 5,
+          "name": {
+            "de": "Cevapcici Teller",
+            "en": "Cevapcici plate"
+          },
+          "description": {
+            "de": "7 Stück, mit Pommes Frites und Salat.",
+            "en": "7 pieces, with fries and salad."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-chicken-nuggets-plate",
+          "order": 6,
+          "name": {
+            "de": "Chicken Nuggets Teller",
+            "en": "Chicken nuggets plate"
+          },
+          "description": {
+            "de": "7 Stück, mit Pommes und Salat.",
+            "en": "7 pieces, with fries and salad."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-chicken-schnitzel-plate",
+          "order": 7,
+          "name": {
+            "de": "Pouletschnitzel Teller",
+            "en": "Chicken schnitzel plate"
+          },
+          "description": {
+            "de": "Mit Pommes und Salat.",
+            "en": "With fries and salad."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-chicken-wings-plate",
+          "order": 8,
+          "name": {
+            "de": "Pouletflügeli Teller",
+            "en": "Chicken wings plate"
+          },
+          "description": {
+            "de": "6 Stück, mit Pommes, Salat.",
+            "en": "6 pieces, with fries and salad."
+          },
+          "priceDisplay": "19.00",
+          "priceNumeric": 1900,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "teller-fish-plate",
+          "order": 9,
+          "name": {
+            "de": "Fisch Teller",
+            "en": "Fish plate"
+          },
+          "description": {
+            "de": "8 Stück, mit Pommes Frites und Salat.",
+            "en": "8 pieces, with fries and salad."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "order": 2,
+      "title": {
+        "de": "Pizza",
+        "en": "Pizza"
+      },
+      "note": {
+        "de": "Alle Pizzen mit Tomaten, Mozzarella und Oregano. Familienpizza 40 cm.",
+        "en": "All pizzas with tomatoes, mozzarella and oregano. Family pizza 40 cm."
+      },
+      "footnote": null,
+      "items": [
+        {
+          "id": "pizza-pizza-margherita",
+          "order": 1,
+          "name": {
+            "de": "Pizza Margherita",
+            "en": "Pizza Margherita"
+          },
+          "description": null,
+          "priceDisplay": "14.00",
+          "priceNumeric": 1400,
+          "priceVerified": false,
+          "familyPriceDisplay": "24.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-sucuk",
+          "order": 2,
+          "name": {
+            "de": "Pizza Sucuk",
+            "en": "Pizza Sucuk"
+          },
+          "description": {
+            "de": "Sucuk, Peperoni.",
+            "en": "Sucuk, peppers."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-thon",
+          "order": 3,
+          "name": {
+            "de": "Pizza Thon",
+            "en": "Pizza Thon"
+          },
+          "description": {
+            "de": "Thon, Zwiebeln.",
+            "en": "Tuna, onions."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-prosciutto",
+          "order": 4,
+          "name": {
+            "de": "Pizza Prosciutto",
+            "en": "Pizza Prosciutto"
+          },
+          "description": {
+            "de": "Schinken.",
+            "en": "Ham."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-funghi",
+          "order": 5,
+          "name": {
+            "de": "Pizza Funghi",
+            "en": "Pizza Funghi"
+          },
+          "description": {
+            "de": "Frische Champignons.",
+            "en": "Fresh mushrooms."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-prosciutto-e-funghi",
+          "order": 6,
+          "name": {
+            "de": "Pizza Prosciutto e Funghi",
+            "en": "Pizza Prosciutto e Funghi"
+          },
+          "description": {
+            "de": "Schinken, frische Champignons.",
+            "en": "Ham, fresh mushrooms."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-napoli",
+          "order": 7,
+          "name": {
+            "de": "Pizza Napoli",
+            "en": "Pizza Napoli"
+          },
+          "description": {
+            "de": "Sardellen, Kapern, Oliven.",
+            "en": "Anchovies, capers, olives."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-hawaii",
+          "order": 8,
+          "name": {
+            "de": "Pizza Hawaii",
+            "en": "Pizza Hawaii"
+          },
+          "description": {
+            "de": "Schinken, Ananas.",
+            "en": "Ham, pineapple."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-vegetariana",
+          "order": 9,
+          "name": {
+            "de": "Pizza Vegetariana",
+            "en": "Pizza Vegetariana"
+          },
+          "description": {
+            "de": "Frisches Gemüse.",
+            "en": "Fresh vegetables."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-kebab",
+          "order": 10,
+          "name": {
+            "de": "Pizza Kebab",
+            "en": "Pizza Kebab"
+          },
+          "description": {
+            "de": "Kebabfleisch.",
+            "en": "Kebab meat."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-salami",
+          "order": 11,
+          "name": {
+            "de": "Pizza Salami",
+            "en": "Pizza Salami"
+          },
+          "description": {
+            "de": "Scharfe Salami.",
+            "en": "Spicy salami."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-frutti-di-mare",
+          "order": 12,
+          "name": {
+            "de": "Pizza Frutti di Mare",
+            "en": "Pizza Frutti di Mare"
+          },
+          "description": {
+            "de": "Meeresfrüchte, frischer Knoblauch.",
+            "en": "Seafood, fresh garlic."
+          },
+          "priceDisplay": "17.50",
+          "priceNumeric": 1750,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-aarau",
+          "order": 13,
+          "name": {
+            "de": "Pizza Aarau",
+            "en": "Pizza Aarau"
+          },
+          "description": {
+            "de": "Rindfleisch, Peperoni, Zwiebeln, Knoblauch.",
+            "en": "Beef, peppers, onions, garlic."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-quattro-stagioni",
+          "order": 14,
+          "name": {
+            "de": "Pizza Quattro Stagioni",
+            "en": "Pizza Quattro Stagioni"
+          },
+          "description": {
+            "de": "Schinken, Champignons, Artischocken, Kapern, Peperoni.",
+            "en": "Ham, mushrooms, artichokes, capers, peppers."
+          },
+          "priceDisplay": "17.50",
+          "priceNumeric": 1750,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-calzone",
+          "order": 15,
+          "name": {
+            "de": "Pizza Calzone",
+            "en": "Pizza Calzone"
+          },
+          "description": {
+            "de": "Schinken, Ei, Champignons.",
+            "en": "Ham, egg, mushrooms."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-insel",
+          "order": 16,
+          "name": {
+            "de": "Pizza Insel",
+            "en": "Pizza Insel"
+          },
+          "description": {
+            "de": "Kebabfleisch, frische Tomaten, Zwiebeln.",
+            "en": "Kebab meat, fresh tomatoes, onions."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pizza-pizza-crevetten",
+          "order": 17,
+          "name": {
+            "de": "Pizza Crevetten",
+            "en": "Pizza Crevetten"
+          },
+          "description": {
+            "de": "Crevetten, frischer Knoblauch.",
+            "en": "Prawns, fresh garlic."
+          },
+          "priceDisplay": "17.50",
+          "priceNumeric": 1750,
+          "priceVerified": false,
+          "familyPriceDisplay": "29.00",
+          "familyLabel": {
+            "de": "40 cm",
+            "en": "40 cm"
+          },
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "pide",
+      "order": 3,
+      "title": {
+        "de": "Pide",
+        "en": "Pide"
+      },
+      "note": null,
+      "footnote": null,
+      "items": [
+        {
+          "id": "pide-pide-with-cheese",
+          "order": 1,
+          "name": {
+            "de": "Pide Käse",
+            "en": "Pide with cheese"
+          },
+          "description": {
+            "de": "Mozzarella, Fetakäse.",
+            "en": "Mozzarella, feta."
+          },
+          "priceDisplay": "15.00",
+          "priceNumeric": 1500,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pide-pide-kebab",
+          "order": 2,
+          "name": {
+            "de": "Pide Kebab",
+            "en": "Pide Kebab"
+          },
+          "description": {
+            "de": "Schafskäse, Mozzarella, Kebabfleisch.",
+            "en": "Sheep's cheese, mozzarella, kebab meat."
+          },
+          "priceDisplay": "17.00",
+          "priceNumeric": 1700,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pide-pide-with-spinach",
+          "order": 3,
+          "name": {
+            "de": "Pide Spinat",
+            "en": "Pide with spinach"
+          },
+          "description": {
+            "de": "Schafskäse, frischer Spinat, Ei, Mozzarella.",
+            "en": "Sheep's cheese, fresh spinach, egg, mozzarella."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "pide-pide-sucuk",
+          "order": 4,
+          "name": {
+            "de": "Pide Sucuk",
+            "en": "Pide Sucuk"
+          },
+          "description": {
+            "de": "Schafskäse, Mozzarella, Sucuk, Ei.",
+            "en": "Sheep's cheese, mozzarella, sucuk, egg."
+          },
+          "priceDisplay": "16.00",
+          "priceNumeric": 1600,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "lahmacun",
+      "order": 4,
+      "title": {
+        "de": "Lahmacun",
+        "en": "Lahmacun"
+      },
+      "note": null,
+      "footnote": null,
+      "items": [
+        {
+          "id": "lahmacun-lahmacun",
+          "order": 1,
+          "name": {
+            "de": "Lahmacun",
+            "en": "Lahmacun"
+          },
+          "description": {
+            "de": "Mit Salat.",
+            "en": "With salad."
+          },
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "lahmacun-lahmacun-with-doner-meat",
+          "order": 2,
+          "name": {
+            "de": "Lahmacun mit Dönerfleisch",
+            "en": "Lahmacun with döner meat"
+          },
+          "description": null,
+          "priceDisplay": "13.00",
+          "priceNumeric": 1300,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "order": 5,
+      "title": {
+        "de": "Snacks",
+        "en": "Snacks"
+      },
+      "note": {
+        "de": "Extra Pommes +2.00 · Extra Fleisch +3.00",
+        "en": "Extra fries +2.00 · Extra meat +3.00"
+      },
+      "footnote": null,
+      "items": [
+        {
+          "id": "snacks-doner-kebab",
+          "order": 1,
+          "name": {
+            "de": "Döner Kebab",
+            "en": "Döner kebab"
+          },
+          "description": null,
+          "priceDisplay": "11.00",
+          "priceNumeric": 1100,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-durum-kebab",
+          "order": 2,
+          "name": {
+            "de": "Dürüm Kebab",
+            "en": "Dürüm kebab"
+          },
+          "description": null,
+          "priceDisplay": "12.00",
+          "priceNumeric": 1200,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-cevapcici",
+          "order": 3,
+          "name": {
+            "de": "Cevapcici",
+            "en": "Cevapcici"
+          },
+          "description": null,
+          "priceDisplay": "11.00",
+          "priceNumeric": 1100,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-chicken-schnitzel",
+          "order": 4,
+          "name": {
+            "de": "Pouletschnitzel",
+            "en": "Chicken schnitzel"
+          },
+          "description": null,
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-grilled-chicken-kebab",
+          "order": 5,
+          "name": {
+            "de": "Poulet Grill Kebab",
+            "en": "Grilled chicken kebab"
+          },
+          "description": null,
+          "priceDisplay": "13.00",
+          "priceNumeric": 1300,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-grilled-lamb-kebab",
+          "order": 6,
+          "name": {
+            "de": "Lamm Grill Kebab",
+            "en": "Grilled lamb kebab"
+          },
+          "description": null,
+          "priceDisplay": "15.00",
+          "priceNumeric": 1500,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-chicken-pepito",
+          "order": 7,
+          "name": {
+            "de": "Poulet Pepito",
+            "en": "Chicken pepito"
+          },
+          "description": null,
+          "priceDisplay": "12.00",
+          "priceNumeric": 1200,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-lamb-pepito",
+          "order": 8,
+          "name": {
+            "de": "Lamm Pepito",
+            "en": "Lamb pepito"
+          },
+          "description": null,
+          "priceDisplay": "13.00",
+          "priceNumeric": 1300,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-falafel",
+          "order": 9,
+          "name": {
+            "de": "Falafel",
+            "en": "Falafel"
+          },
+          "description": {
+            "de": "7 Stk. im Taschenbrot.",
+            "en": "7 pieces in flatbread."
+          },
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-falafel-durum",
+          "order": 10,
+          "name": {
+            "de": "Falafel Dürüm",
+            "en": "Falafel dürüm"
+          },
+          "description": null,
+          "priceDisplay": "11.00",
+          "priceNumeric": 1100,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-sandwich-durum",
+          "order": 11,
+          "name": {
+            "de": "Sandwich / Dürüm",
+            "en": "Sandwich / dürüm"
+          },
+          "description": {
+            "de": "Vegetarisch.",
+            "en": "Vegetarian."
+          },
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-hamburger",
+          "order": 12,
+          "name": {
+            "de": "Hamburger",
+            "en": "Hamburger"
+          },
+          "description": null,
+          "priceDisplay": "9.50",
+          "priceNumeric": 950,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "snacks-cheeseburger",
+          "order": 13,
+          "name": {
+            "de": "Cheeseburger",
+            "en": "Cheeseburger"
+          },
+          "description": null,
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "order": 6,
+      "title": {
+        "de": "Box · Salat · Dessert",
+        "en": "Box · Salad · Dessert"
+      },
+      "note": null,
+      "footnote": null,
+      "items": [
+        {
+          "id": "box-doner-box",
+          "order": 1,
+          "name": {
+            "de": "Döner Box",
+            "en": "Döner box"
+          },
+          "description": {
+            "de": "Klein.",
+            "en": "Small."
+          },
+          "priceDisplay": "12.00 / 10.00",
+          "priceNumeric": null,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-chicken-nuggets-box",
+          "order": 2,
+          "name": {
+            "de": "Chicken Nuggets Box",
+            "en": "Chicken nuggets box"
+          },
+          "description": null,
+          "priceDisplay": "12.00",
+          "priceNumeric": 1200,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-fish-box",
+          "order": 3,
+          "name": {
+            "de": "Fisch Box",
+            "en": "Fish box"
+          },
+          "description": null,
+          "priceDisplay": "12.00",
+          "priceNumeric": 1200,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-falafel-box",
+          "order": 4,
+          "name": {
+            "de": "Falafel Box",
+            "en": "Falafel box"
+          },
+          "description": null,
+          "priceDisplay": "12.00",
+          "priceNumeric": 1200,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-vegi-box",
+          "order": 5,
+          "name": {
+            "de": "Vegi Box",
+            "en": "Vegi box"
+          },
+          "description": null,
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-grilled-chicken-box",
+          "order": 6,
+          "name": {
+            "de": "Poulet Grill Box",
+            "en": "Grilled chicken box"
+          },
+          "description": null,
+          "priceDisplay": "12.00",
+          "priceNumeric": 1200,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-grilled-lamb-box",
+          "order": 7,
+          "name": {
+            "de": "Lamm Grill Box",
+            "en": "Grilled lamb box"
+          },
+          "description": null,
+          "priceDisplay": "13.00",
+          "priceNumeric": 1300,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-cevapcici-box",
+          "order": 8,
+          "name": {
+            "de": "Cevapcici Box",
+            "en": "Cevapcici box"
+          },
+          "description": null,
+          "priceDisplay": "13.00",
+          "priceNumeric": 1300,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-fries",
+          "order": 9,
+          "name": {
+            "de": "Pommes",
+            "en": "Fries"
+          },
+          "description": null,
+          "priceDisplay": "8.00",
+          "priceNumeric": 800,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-fries-xxl",
+          "order": 10,
+          "name": {
+            "de": "Pommes XXL",
+            "en": "Fries XXL"
+          },
+          "description": null,
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-greek-salad",
+          "order": 11,
+          "name": {
+            "de": "Griechischer Salat",
+            "en": "Greek salad"
+          },
+          "description": null,
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-mixed-salad",
+          "order": 12,
+          "name": {
+            "de": "Gemischter Salat",
+            "en": "Mixed salad"
+          },
+          "description": null,
+          "priceDisplay": "8.00",
+          "priceNumeric": 800,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-tuna-salad",
+          "order": 13,
+          "name": {
+            "de": "Thon Salat",
+            "en": "Tuna salad"
+          },
+          "description": null,
+          "priceDisplay": "10.00",
+          "priceNumeric": 1000,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-tiramisu",
+          "order": 14,
+          "name": {
+            "de": "Tiramisu",
+            "en": "Tiramisu"
+          },
+          "description": null,
+          "priceDisplay": "6.00",
+          "priceNumeric": 600,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "box-baklava",
+          "order": 15,
+          "name": {
+            "de": "Baklava",
+            "en": "Baklava"
+          },
+          "description": {
+            "de": "4 Stück.",
+            "en": "4 pieces."
+          },
+          "priceDisplay": "6.00",
+          "priceNumeric": 600,
+          "priceVerified": false,
+          "familyPriceDisplay": null,
+          "familyLabel": null,
+          "available": true,
+          "image": null
+        }
+      ]
+    }
+  ]
+}

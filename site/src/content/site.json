@@ -1,0 +1,35 @@
+{
+  "note": "Only facts confirmed in the client brief or transcribed printed menu are stored here. Unknown values stay null.",
+  "restaurantName": "ALMAS",
+  "titleName": "ALMAS Restaurant",
+  "address": {
+    "street": "Bahnhofstrasse 92",
+    "postalCode": "5000",
+    "city": "Aarau",
+    "country": "CH"
+  },
+  "phone": "062 797 50 00",
+  "phoneHref": "+41627975000",
+  "email": null,
+  "geo": {
+    "lat": 47.3924916,
+    "lng": 8.0532436
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Almas+Restaurant+Bahnhofstrasse+92+5000+Aarau",
+  "osmEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=8.0502%2C47.3909%2C8.0563%2C47.3941&layer=mapnik&marker=47.3924916%2C8.0532436",
+  "social": {
+    "instagram": {
+      "url": null,
+      "verified": false
+    },
+    "facebook": {
+      "url": null,
+      "verified": false
+    },
+    "tiktok": {
+      "url": null,
+      "verified": false
+    }
+  },
+  "hours": null
+}

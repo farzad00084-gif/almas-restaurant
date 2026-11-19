@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de" data-prototype="menu" data-default-theme="light" data-lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speisekarte — ALMAS Restaurant Aarau</title>
+  <meta name="description" content="Die Speisekarte von ALMAS, Bahnhofstrasse 92, 5000 Aarau: Teller, Pizza, Pide, Lahmacun, Snacks, Boxen, Salat und Dessert. Preise in CHF.">
+  <meta name="theme-color" content="#EAE5DC">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=8">
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        var name = root.getAttribute("data-prototype") || "site";
+        var fallback = root.getAttribute("data-default-theme") || "light";
+        var params = new URLSearchParams(window.location.search);
+        var queryTheme = params.get("theme");
+        var storedTheme = window.localStorage.getItem("almas-theme:" + name);
+        var theme = queryTheme === "dark" || queryTheme === "light" ? queryTheme : storedTheme || fallback;
+        root.setAttribute("data-theme", theme);
+        if (queryTheme === "dark" || queryTheme === "light") {
+          window.localStorage.setItem("almas-theme:" + name, queryTheme);
+        }
+        var queryLang = params.get("lang");
+        var storedLang = window.localStorage.getItem("almas-lang");
+        var lang = queryLang === "en" || queryLang === "de" ? queryLang : storedLang === "en" ? "en" : "de";
+        root.setAttribute("data-lang", lang);
+        root.setAttribute("lang", lang);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body data-page="menu">
+  <a class="skip-link" href="#main" data-de="Zum Inhalt springen" data-en="Skip to content">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="hybrid.html" aria-label="ALMAS Restaurant — Aarau">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M10 56 32 8l22 48" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+          <path d="M20.5 43h23" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+          <path d="M32 18.5 38.5 26.5 32 34.5 25.5 26.5Z" fill="currentColor"/>
+        </svg>
+        <span>
+          <span class="brand-word">ALMAS</span>
+          <span class="brand-place">AARAU</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Hauptnavigation" data-aria-de="Hauptnavigation" data-aria-en="Main navigation">
+        <a href="hybrid.html" data-de="Startseite" data-en="Home">Startseite</a>
+        <a href="menu.html" aria-current="page" data-de="Speisekarte" data-en="Menu">Speisekarte</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Sprache">
+          <button type="button" data-lang-set="de" aria-pressed="true">DE</button>
+          <span class="lang-sep" aria-hidden="true">/</span>
+          <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Zum dunklen Modus wechseln" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+          </svg>
+        </button>
+        <button class="menu-btn" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span class="sr-only" data-de="Menü öffnen" data-en="Open menu">Menü öffnen</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+      <a href="hybrid.html"><span data-de="Startseite" data-en="Home">Startseite</span><span class="mono">01</span></a>
+      <a href="menu.html" aria-current="page"><span data-de="Speisekarte" data-en="Menu">Speisekarte</span><span class="mono">02</span></a>
+    </nav>
+    <div class="mobile-menu-meta">
+      <div>
+        <p class="mono" data-de="Adresse" data-en="Address">Adresse</p>
+        <p>Bahnhofstrasse 92<br>5000 Aarau</p>
+      </div>
+      <div>
+        <p class="mono" data-de="Telefon" data-en="Phone">Telefon</p>
+        <a href="tel:+41627975000">062 797 50 00</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Sprache">
+        <button type="button" data-lang-set="de" aria-pressed="true">DE</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="menu-hero">
+      <div class="container menu-hero-grid">
+        <div>
+          <p class="eyebrow">
+            <span class="diamond" aria-hidden="true"></span>
+            <span data-de="ALMAS · Speisekarte" data-en="ALMAS · Menu">ALMAS · Speisekarte</span>
+          </p>
+          <h1 class="display-xl">
+            <span data-lang-block="de">Speise<em>karte</em></span>
+            <span data-lang-block="en">The <em>menu</em></span>
+          </h1>
+        </div>
+        <div class="menu-intro">
+          <p data-de="Grill, Ofen, Teig. Die vollständige Karte — von Tellern über Pizza und Pide bis zum Dessert." data-en="Grill, oven, dough. The complete menu — from plates and pizza to pide and dessert.">Grill, Ofen, Teig. Die vollständige Karte — von Tellern über Pizza und Pide bis zum Dessert.</p>
+          <p class="mono" data-de="Preise in CHF · Stand November 2026 · Änderungen vorbehalten" data-en="Prices in CHF · As of November 2026 · Subject to change">Preise in CHF · Stand November 2026 · Änderungen vorbehalten</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-gallery" aria-label="Einblicke in die Küche" data-aria-de="Einblicke in die Küche" data-aria-en="Impressions from the kitchen">
+      <figure>
+        <img src="../assets/stock/kebab-plate-1600.jpg"
+             srcset="../assets/stock/kebab-plate-900.jpg 900w, ../assets/stock/kebab-plate-1600.jpg 1600w"
+             sizes="(max-width: 640px) 100vw, 33vw"
+             width="1600" height="2000"
+             alt="Gegrillte Fleischspiesse mit Pommes frites, Tomaten und Zwiebeln."
+             data-alt-de="Gegrillte Fleischspiesse mit Pommes frites, Tomaten und Zwiebeln."
+             data-alt-en="Grilled meat skewers with fries, tomatoes and onions."
+             loading="lazy">
+        <figcaption class="mono" data-de="Symbolbild · Teller" data-en="Placeholder · plate">Symbolbild · Teller</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/stock/pizza-margherita-1600.jpg"
+             srcset="../assets/stock/pizza-margherita-900.jpg 900w, ../assets/stock/pizza-margherita-1600.jpg 1600w"
+             sizes="(max-width: 640px) 100vw, 33vw"
+             width="1600" height="1068"
+             alt="Pizza Margherita mit Basilikum auf einem Teller."
+             data-alt-de="Pizza Margherita mit Basilikum auf einem Teller."
+             data-alt-en="Pizza Margherita with basil on a plate."
+             loading="lazy">
+        <figcaption class="mono" data-de="Symbolbild · Pizza" data-en="Placeholder · pizza">Symbolbild · Pizza</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/stock/baklava-1600.jpg"
+             srcset="../assets/stock/baklava-900.jpg 900w, ../assets/stock/baklava-1600.jpg 1600w"
+             sizes="(max-width: 640px) 100vw, 33vw"
+             width="1600" height="2000"
+             alt="Stücke von Pistazien-Baklava."
+             data-alt-de="Stücke von Pistazien-Baklava."
+             data-alt-en="Pieces of pistachio baklava."
+             loading="lazy">
+        <figcaption class="mono" data-de="Symbolbild · Baklava" data-en="Placeholder · baklava">Symbolbild · Baklava</figcaption>
+      </figure>
+    </section>
+
+    <nav class="menu-nav" aria-label="Speisekarten-Kategorien" data-aria-de="Speisekarten-Kategorien" data-aria-en="Menu categories">
+      <div class="container">
+        <div class="menu-nav-inner" data-menu-nav></div>
+      </div>
+    </nav>
+
+    <div data-menu-root="top"></div>
+
+    <figure class="menu-band reveal">
+      <img src="../assets/stock/pide-1600.jpg"
+           srcset="../assets/stock/pide-900.jpg 900w, ../assets/stock/pide-1600.jpg 1150w"
+           sizes="100vw"
+           width="1150" height="870"
+           alt="Frisch gebackene Pide auf einer bemehlten Holzfläche."
+           data-alt-de="Frisch gebackene Pide auf einer bemehlten Holzfläche."
+           data-alt-en="Freshly baked pide on a floured wooden surface."
+           loading="lazy">
+      <figcaption class="mono" data-de="Symbolbild · Pide" data-en="Placeholder · pide">Symbolbild · Pide</figcaption>
+    </figure>
+
+    <div data-menu-root="bottom"></div>
+
+    <noscript>
+      <div class="container">
+        <p class="menu-source">Diese Speisekarte benötigt JavaScript. Die gedruckte Karte im Restaurant bleibt gültig.</p>
+      </div>
+    </noscript>
+
+    <section class="menu-cta">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="diamond" aria-hidden="true"></span>
+          <span data-de="Fragen zur Karte" data-en="Questions about the menu">Fragen zur Karte</span>
+        </p>
+        <h2 class="display-m">
+          <span data-lang-block="de">Lieber direkt<br><em>fragen?</em></span>
+          <span data-lang-block="en">Rather ask<br><em>directly?</em></span>
+        </h2>
+        <p data-de="Für Fragen zu Gerichten, Allergenen oder grösseren Bestellungen rufen Sie uns an." data-en="For questions about dishes, allergens or larger orders, please call us.">Für Fragen zu Gerichten, Allergenen oder grösseren Bestellungen rufen Sie uns an.</p>
+        <a class="btn btn-primary" href="tel:+41627975000">
+          <span data-de="062 797 50 00" data-en="062 797 50 00">062 797 50 00</span>
+        </a>
+        <p class="prototype-note" data-de="Alle Preise und Angaben gemäss gedruckter Speisekarte. Vor Veröffentlichung vom Restaurant bestätigen lassen." data-en="All prices and details as printed on the menu. To be confirmed by the restaurant before publication.">Alle Preise und Angaben gemäss gedruckter Speisekarte. Vor Veröffentlichung vom Restaurant bestätigen lassen.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--light">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-lockup">
+          <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path d="M10 56 32 8l22 48" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+            <path d="M20.5 43h23" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/>
+            <path d="M32 18.5 38.5 26.5 32 34.5 25.5 26.5Z" fill="currentColor"/>
+          </svg>
+          <span>
+            <span class="brand-word">ALMAS</span>
+            <span class="brand-place">AARAU</span>
+          </span>
+        </div>
+
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="mono" data-de="Entdecken" data-en="Explore">Entdecken</p>
+            <ul>
+              <li><a href="hybrid.html" data-de="Startseite" data-en="Home">Startseite</a></li>
+              <li><a href="index.html" data-de="Übersicht" data-en="Overview">Übersicht</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="mono" data-de="Kontakt" data-en="Contact">Kontakt</p>
+            <ul>
+              <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Almas+Restaurant+Bahnhofstrasse+92+5000+Aarau" target="_blank" rel="noopener">Bahnhofstrasse 92<br>5000 Aarau</a></li>
+              <li><a href="tel:+41627975000">062 797 50 00</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="mono" data-de="Folgen" data-en="Follow">Folgen</p>
+            <div class="social-row">
+              <a class="social-link" href="#" data-social="instagram" data-pending-link aria-disabled="true" aria-label="Instagram — Link folgt" data-aria-de="Instagram — Link folgt" data-aria-en="Instagram — link to follow">Instagram</a>
+              <a class="social-link" href="#" data-social="facebook" data-pending-link aria-disabled="true" aria-label="Facebook — Link folgt" data-aria-de="Facebook — Link folgt" data-aria-en="Facebook — link to follow">Facebook</a>
+              <a class="social-link" href="#" data-social="tiktok" data-pending-link aria-disabled="true" aria-label="TikTok — Link folgt" data-aria-de="TikTok — Link folgt" data-aria-en="TikTok — link to follow">TikTok</a>
+            </div>
+            <p class="footer-disclaimer social-note" data-de="Links folgen in Kürze." data-en="Links to follow shortly.">Links folgen in Kürze.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-word" aria-hidden="true">ALMAS</p>
+
+      <div class="footer-bottom">
+        <div>
+          <p class="mono">© 2026 ALMAS Restaurant · Aarau</p>
+          <p class="footer-disclaimer" data-de="Design-Prototyp, nicht veröffentlicht. Symbolbilder von Unsplash. Preise und Angaben gemäss Speisekarte, vor Veröffentlichung zu bestätigen." data-en="Design prototype, not published. Placeholder photography from Unsplash. Prices and details as printed on the menu, to be confirmed before publication.">Design-Prototyp, nicht veröffentlicht. Symbolbilder von Unsplash. Preise und Angaben gemäss Speisekarte, vor Veröffentlichung zu bestätigen.</p>
+        </div>
+        <div class="footer-tools">
+          <div class="lang-switch" role="group" aria-label="Sprache">
+            <button type="button" data-lang-set="de" aria-pressed="true">DE</button>
+            <span class="lang-sep" aria-hidden="true">/</span>
+            <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Zum dunklen Modus wechseln" aria-pressed="false">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <span class="proto-tag">Stage 3 · Menu</span>
+
+  <nav class="mobile-bar" aria-label="Schnellzugriff">
+    <a href="#main"><span data-de="Speisekarte" data-en="Menu">Speisekarte</span></a>
+    <a href="tel:+41627975000"><span data-de="Anrufen" data-en="Call">Anrufen</span></a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Almas+Restaurant+Bahnhofstrasse+92+5000+Aarau" target="_blank" rel="noopener"><span data-de="Route" data-en="Directions">Route</span></a>
+  </nav>
+
+  <script src="assets/js/menu-data.js?v=3" defer></script>
+  <script src="assets/js/app.js?v=4" defer></script>
+</body>
+</html>

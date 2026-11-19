@@ -1,0 +1,106 @@
+{
+  "note": "Temporary prototype photography. Every entry is a placeholder and must be replaced with licensed ALMAS photography before launch.",
+  "images": [
+    {
+      "id": "hero-grill",
+      "file": "hero-grill.jpg",
+      "alt": {
+        "de": "Fleisch über offener Flamme auf dem Grill.",
+        "en": "Meat over an open flame on the grill."
+      },
+      "credit": "Unsplash / @sarawh13",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/grill-above-fire-NTKZrDk-ENM",
+      "isPlaceholder": true
+    },
+    {
+      "id": "dough-hands",
+      "file": "dough-hands.jpg",
+      "alt": {
+        "de": "Hände formen einen Teigball auf bemehlter Fläche.",
+        "en": "Hands shaping a ball of dough on a floured surface."
+      },
+      "credit": "Unsplash / @artek123",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/person-holding-dough-4yzEtTQLdL4",
+      "isPlaceholder": true
+    },
+    {
+      "id": "kebab-plate",
+      "file": "kebab-plate.jpg",
+      "alt": {
+        "de": "Gegrillte Fleischspiesse mit Pommes frites, Tomaten und Zwiebeln.",
+        "en": "Grilled meat skewers with fries, tomatoes and onions."
+      },
+      "caption": {
+        "de": "Symbolbild · Teller",
+        "en": "Placeholder · plate"
+      },
+      "credit": "Unsplash / @markuswinkler",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/grilled-meat-skewers-with-fries-WHtVB-RiW2I",
+      "isPlaceholder": true
+    },
+    {
+      "id": "pizza-margherita",
+      "file": "pizza-margherita.jpg",
+      "alt": {
+        "de": "Pizza Margherita mit Basilikum auf einem Teller.",
+        "en": "Pizza Margherita with basil on a plate."
+      },
+      "caption": {
+        "de": "Symbolbild · Pizza",
+        "en": "Placeholder · pizza"
+      },
+      "credit": "Unsplash / @aurel__lens",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/round-cooked-pizza-x00CzBt4Dfk",
+      "isPlaceholder": true
+    },
+    {
+      "id": "baklava",
+      "file": "baklava.jpg",
+      "alt": {
+        "de": "Stücke von Pistazien-Baklava.",
+        "en": "Pieces of pistachio baklava."
+      },
+      "caption": {
+        "de": "Symbolbild · Baklava",
+        "en": "Placeholder · baklava"
+      },
+      "credit": "Unsplash / @benjamin_chambon",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/golden-baklava-pastries-filled-with-chopped-pistachios-OEDeQheVySQ",
+      "isPlaceholder": true
+    },
+    {
+      "id": "pide",
+      "file": "pide.jpg",
+      "alt": {
+        "de": "Frisch gebackene Pide auf einer bemehlten Holzfläche.",
+        "en": "Freshly baked pide on a floured wooden surface."
+      },
+      "caption": {
+        "de": "Symbolbild · Pide",
+        "en": "Placeholder · pide"
+      },
+      "credit": "Unsplash / @yasinonus",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/chef-bakes-cheese-filled-flatbreads-in-a-stone-oven-yIpw2_2cHmg",
+      "isPlaceholder": true
+    },
+    {
+      "id": "pomegranate",
+      "file": "pomegranate.jpg",
+      "alt": {
+        "de": "",
+        "en": ""
+      },
+      "decorative": true,
+      "credit": "Unsplash / @msaimakin",
+      "licence": "Unsplash License",
+      "sourceUrl": "https://unsplash.com/photos/a-pile-of-fresh-juicy-pomegranate-seeds-m9zxHx7pn78",
+      "isPlaceholder": true
+    }
+  ]
+}
